@@ -1,0 +1,59 @@
+{
+  "$id": "categoryToSpecialtyConverter",
+  "$schema": "https://schema.yext.com/config/km/connector/v3",
+  "displayName": "Category to Specialty Converter",
+  "entityType": "healthcareProfessional",
+  "source": {
+    "sourceConfig": {
+      "nativeSourceConfig": {
+        "source": "yextAccount",
+        "operation": "fetchEntities",
+        "inputs": {
+          "apiKey": "${{apiKey}}",
+          "entityType": "healthcareProfessional",
+          "environment": "api",
+          "vParam": "20230531"
+        }
+      }
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "meta.id",
+        "path": "meta.id"
+      },
+      {
+        "type": "JSON",
+        "header": "categoryIds",
+        "path": "categoryIds"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "categoryIds"
+          ]
+        },
+        "plugin": "categoryToSpecialty",
+        "function": "categoryToSpecialty"
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "header": "categoryIds",
+      "field": "taxonomy_relatedSpecialties",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "meta.id",
+      "field": "entityId",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    }
+  ]
+}
