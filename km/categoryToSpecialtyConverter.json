@@ -19,12 +19,12 @@
     "selectors": [
       {
         "type": "JSON",
-        "header": "meta.id",
+        "header": "Entity ID",
         "path": "meta.id"
       },
       {
         "type": "JSON",
-        "header": "categoryIds",
+        "header": "Related Specialties",
         "path": "categoryIds"
       }
     ]
@@ -44,13 +44,13 @@
   ],
   "mappings": [
     {
-      "header": "categoryIds",
+      "header": "Related Specialties",
       "field": "taxonomy_relatedSpecialties",
       "subfieldPath": [],
       "clearValueIfBlank": false
     },
     {
-      "header": "meta.id",
+      "header": "Entity ID",
       "field": "entityId",
       "subfieldPath": [],
       "clearValueIfBlank": false
