@@ -11,7 +11,7 @@
         "inputs": {
           "apiKey": "${{apiKey}}",
           "entityType": "healthcareProfessional",
-          "environment": "api",
+          "environment": "api", // switch to "sandbox" if using a sandbox account
           "vParam": "20230531"
         }
       }
