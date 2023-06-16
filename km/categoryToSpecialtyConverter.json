@@ -34,7 +34,7 @@
       "function": {
         "inputHeaders": {
           "headers": [
-            "categoryIds"
+            "Related Specialties"
           ]
         },
         "plugin": "prodCategoryToSpecialty",
