@@ -1,4 +1,4 @@
-export function categoryToSpecialty(categoryIds) {
+export function prodCategoryToSpecialty(categoryIds) {
 
     var categoryId = categoryIds.split(',')[0]
 
