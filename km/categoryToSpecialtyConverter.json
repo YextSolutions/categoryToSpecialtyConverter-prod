@@ -37,8 +37,8 @@
             "categoryIds"
           ]
         },
-        "plugin": "categoryToSpecialty",
-        "function": "categoryToSpecialty"
+        "plugin": "prodCategoryToSpecialty",
+        "function": "prodCategoryToSpecialty"
       }
     }
   ],
