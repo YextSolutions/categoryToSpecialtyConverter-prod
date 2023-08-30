@@ -1,8 +1,10 @@
 {
   "$id": "categoryToSpecialtyConverter",
-  "$schema": "https://schema.yext.com/config/km/connector/v3",
+  "$schema": "https://schema.yext.com/config/km/connector/v4",
   "displayName": "Category to Specialty Converter",
-  "entityType": "healthcareProfessional",
+  "entityTypes": [
+      "healthcareProfessional"
+  ],
   "source": {
     "sourceConfig": {
       "nativeSourceConfig": {
@@ -55,5 +57,9 @@
       "subfieldPath": [],
       "clearValueIfBlank": false
     }
-  ]
+  ],
+  "comprehensiveModeConfig": {
+      "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+      "actionOnMissingEntities": "DELETE"
+  }
 }
